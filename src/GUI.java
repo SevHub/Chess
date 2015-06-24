@@ -9,7 +9,7 @@ public class GUI extends Frame {
 	//Square[] fieldArray;
 	
 	public GUI(Figure[] arr) {
-		super("Schach");
+		super("Schach"); //Frame Title 
 		setLayout(new BorderLayout());
 		setLocation(100,100);
 		setSize(800,800);
