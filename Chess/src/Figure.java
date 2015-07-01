@@ -3,9 +3,9 @@
 public abstract class Figure {
 	private boolean isBlack;
 	private int id; //tells what kind of figure
-	private GameField field;
-	private int posX;
-	private int posY;
+	protected GameField field;
+	protected int posX;
+	protected int posY;
 	
 	/* 1 = King
 	 * 2 = Queen
