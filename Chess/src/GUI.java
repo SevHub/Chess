@@ -12,7 +12,7 @@ public class GUI extends Frame {
 	private GameField field;
 	
 	public GUI(Figure[] arr) {
-		super("Schach");
+		super("Schach bla");
 		setLayout(new BorderLayout());
 		setLocation(100,100);
 		setSize(800,800);
