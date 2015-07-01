@@ -1,7 +1,5 @@
 import java.awt.*;
 
-import figures.Figure;
-
 public class Main {
 	public static void main (String[] args) {
 		

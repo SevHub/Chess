@@ -1,10 +1,23 @@
 import java.awt.*;
+
 import figures.*;
 
 
 
 public class GameField extends Panel{
-	static Square[] arr=new Square[64];
+	static Square[][] arr=new Square[8][8];
+	
+	/*
+	arr[y][x]
+	
+	----x--->
+	|	
+	|	(0,0)(0,1)(0,2)....(0,7)
+	y	(1,0)(1,1)			 :
+	|	:					 :
+	|	:					 :
+	V	(7,0)..............(7,7)
+	*/
 	boolean blacksTurn;
 	
 	
@@ -25,40 +38,40 @@ public class GameField extends Panel{
 			
 			if (inpArr==null) { 
 				
-				arr[0].setFigure(new Rook(false));
-				arr[1].setFigure(new Knight(false));
-				arr[2].setFigure(new Bishop(false));
-				arr[3].setFigure(new Queen(false));
-				arr[4].setFigure(new King(false));
-				arr[5].setFigure(new Bishop(false));
-				arr[6].setFigure(new Knight(false));
-				arr[7].setFigure(new Rook(false));
-				arr[8].setFigure(new Pawn(false));
-				arr[9].setFigure(new Pawn(false));
-				arr[10].setFigure(new Pawn(false));
-				arr[11].setFigure(new Pawn(false));
-				arr[12].setFigure(new Pawn(false));
-				arr[13].setFigure(new Pawn(false));
-				arr[14].setFigure(new Pawn(false));
-				arr[15].setFigure(new Pawn(false));
+				arr[0][0].setFigure(new Rook(false));
+				arr[0][1].setFigure(new Knight(false));
+				arr[0][2].setFigure(new Bishop(false));
+				arr[0][3].setFigure(new Queen(false));
+				arr[0][4].setFigure(new King(false));
+				arr[0][5].setFigure(new Bishop(false));
+				arr[0][6].setFigure(new Knight(false));
+				arr[0][7].setFigure(new Rook(false));
+				arr[1][0].setFigure(new Pawn(false));
+				arr[1][1].setFigure(new Pawn(false));
+				arr[1][2].setFigure(new Pawn(false));
+				arr[1][3].setFigure(new Pawn(false));
+				arr[1][4].setFigure(new Pawn(false));
+				arr[1][5].setFigure(new Pawn(false));
+				arr[1][6].setFigure(new Pawn(false));
+				arr[1][7].setFigure(new Pawn(false));
 
 				
-				arr[63].setFigure(new Rook(false));
-				arr[62].setFigure(new Knight(false));
-				arr[61].setFigure(new Bishop(false));
-				arr[60].setFigure(new Queen(false));
-				arr[59].setFigure(new King(false));
-				arr[58].setFigure(new Bishop(false));
-				arr[57].setFigure(new Knight(false));
-				arr[56].setFigure(new Rook(false));
-				arr[55].setFigure(new Pawn(false));
-				arr[54].setFigure(new Pawn(false));
-				arr[53].setFigure(new Pawn(false));
-				arr[52].setFigure(new Pawn(false));
-				arr[51].setFigure(new Pawn(false));
-				arr[50].setFigure(new Pawn(false));
-				arr[49].setFigure(new Pawn(false));
-				arr[48].setFigure(new Pawn(false));
+				arr[7][0].setFigure(new Rook(false));
+				arr[7][1].setFigure(new Knight(false));
+				arr[7][2].setFigure(new Bishop(false));
+				arr[7][3].setFigure(new Queen(false));
+				arr[7][4].setFigure(new King(false));
+				arr[7][5].setFigure(new Bishop(false));
+				arr[7][6].setFigure(new Knight(false));
+				arr[7][7].setFigure(new Rook(false));
+				arr[6][0].setFigure(new Pawn(false));
+				arr[6][1].setFigure(new Pawn(false));
+				arr[6][2].setFigure(new Pawn(false));
+				arr[6][3].setFigure(new Pawn(false));
+				arr[6][4].setFigure(new Pawn(false));
+				arr[6][5].setFigure(new Pawn(false));
+				arr[6][6].setFigure(new Pawn(false));
+				arr[6][7].setFigure(new Pawn(false));
 				
 			}
 			//create a loadfile game
@@ -70,6 +83,17 @@ public class GameField extends Panel{
 			
 		}
 	
+	
+	// new funktion by sev
+	Figure getFigure(int x, int y)
+	{
+		return arr[y][x].getFigure();
+	}
+		
+		
+	// this funktions might be obsolete so far
+	
+	/*
 	public boolean canMove(boolean b,int x, int y) { //x= my coordinates ; y = other square's coordinates
 		boolean output=false;
 		if ((arr[y]).getFigure()==null) {
@@ -144,6 +168,6 @@ public class GameField extends Panel{
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
+	*/
 
 }

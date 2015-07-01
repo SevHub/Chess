@@ -1,7 +1,5 @@
 import java.awt.*;
 
-import figures.Figure;
-
 public class Square extends Panel{
 	static int selected=-1;
 	static int target=-1;
@@ -15,6 +13,7 @@ public class Square extends Panel{
 		id=i;
 		fieldColor=c;
 		setBackground(fieldColor);
+		figure = null; //be sure that at least null is assigned to this
 		
 	}
 	
